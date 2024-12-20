@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["./node_modules/@types", "./types"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,6 +22,16 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",            // Include next-env.d.ts for Next.js configuration
+    "**/*.ts",                  // Include all TypeScript files
+    "**/*.tsx",                 // Include all TypeScript React files
+    "types/offscreencanvas.d.ts" // Include custom type definitions for OffscreenCanvas
+  ],
+  "exclude": [
+    "node_modules",             // Exclude node_modules folder
+    "**/node_modules",          // Exclude nested node_modules
+    ".next",                    // Exclude build directory created by Next.js
+    "types"                     // Exclude any `types` folder that might be redundant
+  ]
 }
