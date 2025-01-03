@@ -38,7 +38,7 @@ position = "right"
                 </div>
                 < div className = "flex mt-16 md:flex-row flex-col justify-between items-center" >
                     <div className="flex items-center" >
-                        <Image src='/logo.svg' alt = "Logo" height = { 50} width = { 50} />& nbsp;& nbsp;& nbsp;
+                        <Image src='/logo.svg' alt = "Logo" height = { 50} width = { 50} />&nbsp;&nbsp;&nbsp;
 <p className="md:text-base text-sm md:font-normal font-light" >
     Copyright © 2024
         </p>
