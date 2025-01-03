@@ -1,3 +1,6 @@
+'use client';
+
+import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import { FloatingNav } from "../components/ui/FloatingNav";
@@ -12,6 +15,15 @@ import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
+
+// Dynamically import components that might cause SSR issues
+const BentoGrid = dynamic(() => import('@/components/ui/BentoGrid').then(mod => mod.BentoGrid), { 
+  ssr: false 
+});
+
+const BentoGridItem = dynamic(() => import('@/components/ui/BentoGrid').then(mod => mod.BentoGridItem), { 
+  ssr: false 
+});
 
 export default function Home() {
   return (

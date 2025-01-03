@@ -243,6 +243,16 @@ export function WebGLRendererConfig() {
 }
 
 export function World(props: WorldProps) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <div>Loading...</div>; // Or any loading indicator
+  }
+
   const { globeConfig } = props;
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
