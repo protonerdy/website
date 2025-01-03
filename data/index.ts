@@ -28,7 +28,7 @@ export const gridItems = [
     },
     {
         id: 3,
-        title: "What the creators have to say on youtube",
+        title: "Your Partner in Building Engaged Communities",
         // description: "I constantly try to improve",
         className: "lg:col-span-2 md:col-span-3 md:row-span-2",
         imgClassName: "",
